@@ -27,6 +27,7 @@
     "typescript": "^5.8.2"
   },
   "dependencies": {
+    "gpt4all": "^4.0.0",
     "openai": "^4.90.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2"

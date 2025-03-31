@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 import { test, expect } from "@jest/globals";
+import * as fs from 'fs';
 
 test.skip("should return a response from OpenAI", async () => {
 
@@ -15,4 +16,5 @@ test.skip("should return a response from OpenAI", async () => {
     
     console.log(response.output_text);
     expect(response.output_text.length).toBeGreaterThan(0);
+    fs.writeFileSync("./test/output/openai_testplan.md", response.output_text);
 }, 60000);
