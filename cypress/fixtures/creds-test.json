@@ -1,0 +1,7 @@
+[
+    { "username": "richtig@horsti.de", "password": "richtig" },
+    { "username": "richtig@horsti.de", "password": "ralsch" },
+    { "username": "falsch@horsti.de", "password": "richtig" },
+    { "username": "richtig@horst.de"  },
+    { "password": "richtig" }
+]
