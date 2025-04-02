@@ -4,6 +4,10 @@ import { ExamplePage } from "../pages/example-page";
 
 const examplePage = new ExamplePage();
 
+Given(`I navigate to the page {string}`, (url:string) => {
+  cy.visit(url);
+});
+
 Given(`I navigate to the example page`, () => {
     examplePage.navigateToExamplePage();
 });

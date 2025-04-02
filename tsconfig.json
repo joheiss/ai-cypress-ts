@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["es5", "dom"],
+    "lib": ["esnext", "dom"],
     "sourceMap": true,
-    "types": ["cypress", "node"],
+    "types": ["cypress", "cypress-axe", "node"],
     "esModuleInterop": true
   },
   "include": ["**/*.ts"]

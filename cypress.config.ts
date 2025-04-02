@@ -6,9 +6,22 @@ import { createEsbuildPlugin } from "@badeball/cypress-cucumber-preprocessor/esb
 export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
-    async setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions): Promise<Cypress.PluginConfigOptions> {
+    async setupNodeEvents(
+      on: Cypress.PluginEvents,
+      config: Cypress.PluginConfigOptions
+    ): Promise<Cypress.PluginConfigOptions> {
       // This is required for the preprocessor to be able to generate JSON reports after each run, and more,
       await addCucumberPreprocessorPlugin(on, config);
+      on("task", {
+        log(message) {
+          console.log(message);
+          return null;
+        },
+        table(message) {
+          console.table(message);
+          return null;
+        },
+      });
       on(
         "file:preprocessor",
         createBundler({
